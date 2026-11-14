@@ -15,7 +15,7 @@ impl Default for Cpu {
 
 impl Cpu {
     pub fn step(&mut self) {
-        // Over to you to implement `step`!
+        self.pc = self.pc.wrapping_add(1);
     }
 }
 
@@ -31,12 +31,12 @@ mod tests {
     }
 
     // Uncomment this test once the previous test passes!
-    // #[test]
-    // fn step_increments_pc() {
-    //     let mut cpu = Cpu::default();
-    //     cpu.step();
-    //     assert_eq!(cpu.pc, 1, "wrong PC after step()");
-    //     cpu.step();
-    //     assert_eq!(cpu.pc, 2, "wrong PC after step()");
-    // }
+    #[test]
+    fn step_increments_pc() {
+        let mut cpu = Cpu::default();
+        cpu.step();
+        assert_eq!(cpu.pc, 1, "wrong PC after step()");
+        cpu.step();
+        assert_eq!(cpu.pc, 2, "wrong PC after step()");
+    }
 }
