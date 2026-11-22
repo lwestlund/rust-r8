@@ -1,6 +1,8 @@
-[package]
-name = "r8"
-version = "0.1.0"
-edition = "2024"
+[workspace]
+resolver = "3"
+members = [
+  "r8"
+]
 
-[dependencies]
+[workspace.package]
+edition = "2024"
