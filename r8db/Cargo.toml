@@ -1,0 +1,6 @@
+[package]
+name = "r8db"
+edition.workspace = true
+
+[dependencies]
+r8.workspace = true

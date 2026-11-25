@@ -5,3 +5,10 @@ version = 4
 [[package]]
 name = "r8"
 version = "0.1.0"
+
+[[package]]
+name = "r8db"
+version = "0.0.0"
+dependencies = [
+ "r8",
+]

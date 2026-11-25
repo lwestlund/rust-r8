@@ -1,8 +1,12 @@
 [workspace]
 resolver = "3"
 members = [
-  "r8"
+  "r8",
+  "r8db",
 ]
 
 [workspace.package]
 edition = "2024"
+
+[workspace.dependencies]
+r8 = { path = "r8" }
